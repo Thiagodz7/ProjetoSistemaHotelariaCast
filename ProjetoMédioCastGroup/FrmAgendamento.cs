@@ -136,6 +136,7 @@ namespace ProjetoMédioCastGroup
         private void FrmAgendamento_Load(object sender, EventArgs e)
         {
             MostrarDadosAtendente();
+            txtValorEstadia.Enabled = false;
         }
 
         private void btnRemover_Click(object sender, EventArgs e)

@@ -198,9 +198,9 @@ namespace ProjetoMédioCastGroup
             // dgvAgendamentos
             // 
             this.dgvAgendamentos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAgendamentos.Location = new System.Drawing.Point(0, 70);
+            this.dgvAgendamentos.Location = new System.Drawing.Point(0, 98);
             this.dgvAgendamentos.Name = "dgvAgendamentos";
-            this.dgvAgendamentos.Size = new System.Drawing.Size(300, 266);
+            this.dgvAgendamentos.Size = new System.Drawing.Size(300, 220);
             this.dgvAgendamentos.TabIndex = 27;
             // 
             // pictureBox1
