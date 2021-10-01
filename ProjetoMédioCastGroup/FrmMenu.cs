@@ -13,6 +13,8 @@ namespace ProjetoMédioCastGroup
     public partial class FrmMenu : Form
     {
         bool limite = false;
+        bool limiteInicio = false;
+        FrmInicio bemVindo = new FrmInicio();
         public FrmMenu()
         {
             InitializeComponent();
@@ -22,19 +24,35 @@ namespace ProjetoMédioCastGroup
         {
             Close();
         }
+        private void FrmMenu_Load(object sender, EventArgs e)
+        {
+            bemVindo.MdiParent = this;
+            bemVindo.Show();
+        }
 
         private void btnInicio_Click(object sender, EventArgs e)
         {
+            if (limiteInicio == false)
+            {
+                FrmInicio inicio = new FrmInicio();
+                inicio.MdiParent = this;
+                inicio.Show();
+                limiteInicio = true;
+                limite = false;
+            }
+
         }
 
         private void btnModificarServiços_Click(object sender, EventArgs e)
         {
-            if(limite == false)
+            bemVindo.Close();
+            if (limite == false)
             {
                 FrmAgendamento frmAgendamento = new FrmAgendamento();
                 frmAgendamento.MdiParent = this;
                 frmAgendamento.Show();
                 limite = true;
+                limiteInicio = false;
             }
         }
     }

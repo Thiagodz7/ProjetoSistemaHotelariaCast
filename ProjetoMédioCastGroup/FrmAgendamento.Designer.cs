@@ -41,15 +41,13 @@ namespace ProjetoMédioCastGroup
             this.label4 = new System.Windows.Forms.Label();
             this.mskCheckIn = new System.Windows.Forms.MaskedTextBox();
             this.mskCheckOut = new System.Windows.Forms.MaskedTextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnAlterar = new System.Windows.Forms.Button();
-            this.btnRemover = new System.Windows.Forms.Button();
             this.btnAgendar = new System.Windows.Forms.Button();
             this.txtValorEstadia = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.dgvAgendamentos = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAgendamentos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtNumeroQuarto
@@ -169,40 +167,11 @@ namespace ProjetoMédioCastGroup
             this.mskCheckOut.TabIndex = 2;
             this.mskCheckOut.ValidatingType = typeof(System.DateTime);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::ProjetoMédioCastGroup.Properties.Resources.Agendamenotp;
-            this.pictureBox1.Location = new System.Drawing.Point(0, -2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(300, 415);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 25;
-            this.pictureBox1.TabStop = false;
-            // 
-            // btnAlterar
-            // 
-            this.btnAlterar.Location = new System.Drawing.Point(487, 356);
-            this.btnAlterar.Name = "btnAlterar";
-            this.btnAlterar.Size = new System.Drawing.Size(75, 23);
-            this.btnAlterar.TabIndex = 10;
-            this.btnAlterar.Text = "Alterar";
-            this.btnAlterar.UseVisualStyleBackColor = true;
-            // 
-            // btnRemover
-            // 
-            this.btnRemover.Location = new System.Drawing.Point(406, 356);
-            this.btnRemover.Name = "btnRemover";
-            this.btnRemover.Size = new System.Drawing.Size(75, 23);
-            this.btnRemover.TabIndex = 9;
-            this.btnRemover.Text = "Remover";
-            this.btnRemover.UseVisualStyleBackColor = true;
-            this.btnRemover.Click += new System.EventHandler(this.btnRemover_Click);
-            // 
             // btnAgendar
             // 
             this.btnAgendar.Location = new System.Drawing.Point(325, 356);
             this.btnAgendar.Name = "btnAgendar";
-            this.btnAgendar.Size = new System.Drawing.Size(75, 23);
+            this.btnAgendar.Size = new System.Drawing.Size(261, 37);
             this.btnAgendar.TabIndex = 8;
             this.btnAgendar.Text = "Agendar";
             this.btnAgendar.UseVisualStyleBackColor = true;
@@ -229,10 +198,20 @@ namespace ProjetoMédioCastGroup
             // dgvAgendamentos
             // 
             this.dgvAgendamentos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAgendamentos.Location = new System.Drawing.Point(0, 86);
+            this.dgvAgendamentos.Location = new System.Drawing.Point(0, 70);
             this.dgvAgendamentos.Name = "dgvAgendamentos";
-            this.dgvAgendamentos.Size = new System.Drawing.Size(300, 195);
+            this.dgvAgendamentos.Size = new System.Drawing.Size(300, 266);
             this.dgvAgendamentos.TabIndex = 27;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::ProjetoMédioCastGroup.Properties.Resources.Agendamenotp;
+            this.pictureBox1.Location = new System.Drawing.Point(0, -2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(300, 415);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 25;
+            this.pictureBox1.TabStop = false;
             // 
             // FrmAgendamento
             // 
@@ -242,8 +221,6 @@ namespace ProjetoMédioCastGroup
             this.ClientSize = new System.Drawing.Size(633, 405);
             this.Controls.Add(this.dgvAgendamentos);
             this.Controls.Add(this.btnAgendar);
-            this.Controls.Add(this.btnRemover);
-            this.Controls.Add(this.btnAlterar);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.mskCheckOut);
             this.Controls.Add(this.mskCheckIn);
@@ -261,10 +238,11 @@ namespace ProjetoMédioCastGroup
             this.Controls.Add(this.txtNumeroQuarto);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmAgendamento";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Agendamentos";
             this.Load += new System.EventHandler(this.FrmAgendamento_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAgendamentos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -285,8 +263,6 @@ namespace ProjetoMédioCastGroup
         private System.Windows.Forms.MaskedTextBox mskCheckIn;
         private System.Windows.Forms.MaskedTextBox mskCheckOut;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button btnAlterar;
-        private System.Windows.Forms.Button btnRemover;
         private System.Windows.Forms.Button btnAgendar;
         private System.Windows.Forms.TextBox txtValorEstadia;
         private System.Windows.Forms.Label label5;

@@ -153,6 +153,16 @@ namespace ProjetoMédioCastGroup.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap SEJA_BEM_VINDO_ {
+            get {
+                object obj = ResourceManager.GetObject("SEJA BEM VINDO!", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap TextBoxNormal {
             get {
                 object obj = ResourceManager.GetObject("TextBoxNormal", resourceCulture);

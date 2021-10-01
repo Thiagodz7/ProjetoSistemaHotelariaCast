@@ -28,6 +28,7 @@ namespace ProjetoMédioCastGroup
         {
             InitializeComponent();
         }
+
         private bool VerificaTextBox()
         {
             bool confirma = true;
@@ -70,6 +71,7 @@ namespace ProjetoMédioCastGroup
 
             return confirma;
         }
+
         private void LimpaCampos(Control.ControlCollection controles)
         {
             //Faz um laço para todos os controles passados no parâmetro
@@ -138,7 +140,6 @@ namespace ProjetoMédioCastGroup
 
         private void btnRemover_Click(object sender, EventArgs e)
         {
-
         }
 
         private void btnAgendar_Click(object sender, EventArgs e)
