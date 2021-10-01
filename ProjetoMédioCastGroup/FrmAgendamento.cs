@@ -14,6 +14,7 @@ namespace ProjetoMédioCastGroup
     
     public partial class FrmAgendamento : Form
     {
+        //variaveis locais
         int idServiço=1, totalDias, totalHospedes;
         float valorEstadia = 20, taxa = 13, valorFinal = 0;
         SqlCommand objComandoSql = new SqlCommand();
