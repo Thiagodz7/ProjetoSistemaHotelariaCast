@@ -12,9 +12,11 @@ namespace ProjetoMédioCastGroup
 {
     public partial class FrmMenu : Form
     {
+        //validação
         bool limite = false;
         bool limiteInicio = false;
         FrmInicio bemVindo = new FrmInicio();
+
         public FrmMenu()
         {
             InitializeComponent();
