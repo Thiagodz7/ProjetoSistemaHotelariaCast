@@ -59,6 +59,12 @@
     <Compile Include="FrmAgendamento.Designer.cs">
       <DependentUpon>FrmAgendamento.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmCadastrarClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCadastrarClientes.Designer.cs">
+      <DependentUpon>FrmCadastrarClientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmInicio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,6 +84,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmAgendamento.resx">
       <DependentUpon>FrmAgendamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCadastrarClientes.resx">
+      <DependentUpon>FrmCadastrarClientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmInicio.resx">
       <DependentUpon>FrmInicio.cs</DependentUpon>

@@ -39,6 +39,10 @@ Create table tbFuncionarios(
 insert into tbFuncionarios(nome_Funcionario,cpf,dependentes,id_Cargo,id_Setor) values('Administrador',123456789,0,1,1);
 insert into tbFuncionarios(nome_Funcionario,cpf,dependentes,id_Cargo,id_Setor) values('thiago',987654321,0,2,1);
 
+select * from tbFuncionarios;
+
+--delete from tbFuncionarios where (id_Funcionario= 3) and (id_Funcionario = 4);
+
 --------------------------------------------------------------
 Create table tbQuartos(
     id_Quarto int identity(1,1) primary key,

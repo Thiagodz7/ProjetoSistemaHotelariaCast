@@ -29,6 +29,7 @@ namespace ProjetoMédioCastGroup
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMenu));
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnModificarServiços = new System.Windows.Forms.Button();
@@ -41,6 +42,7 @@ namespace ProjetoMédioCastGroup
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblMenu = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -161,6 +163,7 @@ namespace ProjetoMédioCastGroup
             this.btnCadastroCliente.TabIndex = 0;
             this.btnCadastroCliente.Text = "                       Cadastrar \r\n                        Clientes  ";
             this.btnCadastroCliente.UseVisualStyleBackColor = false;
+            this.btnCadastroCliente.Click += new System.EventHandler(this.btnCadastroCliente_Click);
             // 
             // btnInicio
             // 
@@ -230,6 +233,10 @@ namespace ProjetoMédioCastGroup
             this.label2.Text = "X";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // FrmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -265,5 +272,6 @@ namespace ProjetoMédioCastGroup
         private System.Windows.Forms.Label lblMenu;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Timer timer1;
     }
 }

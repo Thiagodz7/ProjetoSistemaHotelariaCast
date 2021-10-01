@@ -87,11 +87,11 @@ namespace ProjetoMédioCastGroup
             mskCheckOut.Clear();
         }
 
-        private void MostrarDadosAtendente()
+        private void MostrarDadosAgendamentos()
         {
             conn = Conexao.obterConexao();
             DataTable tb = new DataTable();
-            string Query = " select * from Agendamentos;";
+            string Query = "SELECT  dbo.Agendamentos.id_Agendamento AS [Código Agendamento], dbo.Agendamentos.check_In AS [Check In], dbo.Agendamentos.check_Out AS [Check Out], dbo.Agendamentos.id_Quarto AS [Nº Quarto], replace(replace(dbo.tbQuartos.ocupação,'0','Vazio'),'1','Cheio')ocupação, dbo.tbClientes.nome_Cliente AS Cliente, dbo.Agendamentos.numero_Pessoas AS [Nº Hóspedes], dbo.Agendamentos.Valor_Estadia AS [Valor Estadia], dbo.tbFuncionarios.nome_Funcionario AS Funcionário, dbo.tbCargos.cargo AS Cargo FROM dbo.Agendamentos INNER JOIN dbo.tbClientes ON dbo.Agendamentos.id_Cliente = dbo.tbClientes.id_Cliente INNER JOIN dbo.tbFuncionarios ON dbo.Agendamentos.id_Funcionario = dbo.tbFuncionarios.id_Funcionario INNER JOIN dbo.tbCargos ON dbo.tbFuncionarios.id_Cargo = dbo.tbCargos.id_Cargo INNER JOIN dbo.tbQuartos ON dbo.Agendamentos.id_Quarto = dbo.tbQuartos.id_Quarto";
             SqlDataAdapter da = new SqlDataAdapter(Query, conn);
             da.Fill(tb);
             dgvAgendamentos.DataSource = tb; 
@@ -135,7 +135,7 @@ namespace ProjetoMédioCastGroup
 
         private void FrmAgendamento_Load(object sender, EventArgs e)
         {
-            MostrarDadosAtendente();
+            MostrarDadosAgendamentos();
             txtValorEstadia.Enabled = false;
         }
 
@@ -165,6 +165,7 @@ namespace ProjetoMédioCastGroup
                     if (rdBasico.Checked && !rdPremium.Checked)
                     {
                         idServiço = 1;
+                        valorTotal = valorFinal;
                     }
                     else if (rdPremium.Checked && !rdBasico.Checked)
                     {
@@ -180,7 +181,7 @@ namespace ProjetoMédioCastGroup
                     objComandoSql.ExecuteNonQuery();
 
                     MessageBox.Show("Salvo com Sucesso!");
-                    MostrarDadosAtendente();
+                    
 
                     confirmaAgenda = true;
                     if (confirmaAgenda == true)
@@ -205,6 +206,7 @@ namespace ProjetoMédioCastGroup
                             conn.Close();
                         }
                     }
+                    MostrarDadosAgendamentos();
                 }
                 catch (Exception erro)
                 {
@@ -215,7 +217,6 @@ namespace ProjetoMédioCastGroup
                     txtNumeroQuarto.Focus();
                     conn.Close();
                     LimpaCampos(this.Controls);
-
                     valorEstadia = 20;
                     taxa = 13;
                     valorFinal = 0;

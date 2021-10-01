@@ -15,6 +15,7 @@ namespace ProjetoMédioCastGroup
         //validação
         bool limite = false;
         bool limiteInicio = false;
+        bool limiteCliente = false;
         FrmInicio bemVindo = new FrmInicio();
 
         public FrmMenu()
@@ -26,10 +27,17 @@ namespace ProjetoMédioCastGroup
         {
             Close();
         }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            //lblHora.Text = hora + ":" + segundos + ":" + mSegundos;
+        }
+
         private void FrmMenu_Load(object sender, EventArgs e)
         {
+            //timer1.Start();
             bemVindo.MdiParent = this;
-            bemVindo.Show();
+            bemVindo.Show(); 
         }
 
         private void btnInicio_Click(object sender, EventArgs e)
@@ -41,6 +49,7 @@ namespace ProjetoMédioCastGroup
                 inicio.Show();
                 limiteInicio = true;
                 limite = false;
+                limiteCliente = false;
             }
 
         }
@@ -55,7 +64,23 @@ namespace ProjetoMédioCastGroup
                 frmAgendamento.Show();
                 limite = true;
                 limiteInicio = false;
+                limiteCliente = false;
             }
         }
+
+        private void btnCadastroCliente_Click(object sender, EventArgs e)
+        {
+            FrmCadastrarClientes cliente = new FrmCadastrarClientes();
+            if (limiteCliente == false)
+            {
+                cliente.MdiParent = this;
+                cliente.Show();
+                limiteCliente = true;
+                limiteInicio = false;
+                limite = false;
+            }
+        }
+
+
     }
 }
